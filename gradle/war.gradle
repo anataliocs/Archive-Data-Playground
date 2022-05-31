@@ -1,7 +1,7 @@
 apply plugin: "war"
 
 bootWar {
-    mainClass = "io.infura.wenlambo.WenlamboApp"
+    mainClass = "io.infura.archivedataplayground.ArchiveDataPlaygroundApp"
     includes = ["WEB-INF/**", "META-INF/**"]
     webXml = file("${project.rootDir}/src/main/webapp/WEB-INF/web.xml")
 }

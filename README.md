@@ -1,4 +1,4 @@
-# wenlambo
+# Archive Data Playground
 
 This application was generated using JHipster 7.8.1, you can find documentation and help at [https://www.jhipster.tech](https://www.jhipster.tech).
 
@@ -99,7 +99,7 @@ docker-compose -f src/main/docker/jhipster-control-center.yml up
 
 ### Packaging as jar
 
-To build the final jar and optimize the wenlambo application for production, run:
+To build the final jar and optimize the Archive Data Playground application for production, run:
 
 ```
 ./gradlew -Pprod clean bootJar

@@ -2,7 +2,7 @@
   "generator-jhipster": {
     "applicationType": "monolith",
     "authenticationType": "jwt",
-    "baseName": "wenlambo",
+    "baseName": "archive-data-playground",
     "blueprints": [],
     "buildTool": "gradle",
     "cacheProvider": "no",
@@ -27,7 +27,7 @@
     "messageBroker": false,
     "nativeLanguage": "en",
     "otherModules": [],
-    "packageName": "io.infura.wenlambo",
+    "packageName": "io.infura.archivedataplayground",
     "pages": [],
     "prodDatabaseType": "postgresql",
     "reactive": false,

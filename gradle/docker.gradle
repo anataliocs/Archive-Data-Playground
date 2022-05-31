@@ -3,7 +3,7 @@ jib {
         image = "eclipse-temurin:11-jre-focal"
     }
     to {
-        image = "wenlambo:latest"
+        image = "archivedataplayground:latest"
     }
     container {
         entrypoint = ["bash", "-c", "/entrypoint.sh"]

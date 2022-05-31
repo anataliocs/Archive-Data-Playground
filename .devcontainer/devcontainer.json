@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.209.6/containers/java
 {
-  "name": "Wenlambo",
+  "name": "archive-data-playground",
   "build": {
     "dockerfile": "Dockerfile",
     "args": {

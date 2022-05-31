@@ -4,7 +4,7 @@
 <configuration scan="true">
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
-    <logger name="io.infura.wenlambo" level="INFO"/>
+    <logger name="io.infura.archivedataplayground" level="INFO"/>
 
     <logger name="tech.jhipster" level="WARN"/>
 

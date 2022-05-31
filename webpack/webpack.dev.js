@@ -96,8 +96,8 @@ module.exports = async options =>
         }
       ),
       new WebpackNotifierPlugin({
-        title: 'Wenlambo',
-        contentImage: path.join(__dirname, 'logo-jhipster.png'),
+        title: 'archivedataplayground',
+        contentImage: path.join(__dirname, 'logo-infura.jpg'),
       }),
     ].filter(Boolean),
   });

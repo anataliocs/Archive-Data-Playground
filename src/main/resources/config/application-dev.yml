@@ -18,7 +18,7 @@ logging:
     ROOT: DEBUG
     tech.jhipster: DEBUG
     org.hibernate.SQL: DEBUG
-    io.infura.wenlambo: DEBUG
+    io.infura.archivedataplayground: DEBUG
 
 spring:
   devtools:
@@ -26,14 +26,14 @@ spring:
       enabled: true
       additional-exclude: static/**,.h2.server.properties
     livereload:
-      enabled: false # we use Webpack dev server + BrowserSync for livereload
+      enabled: true # we use Webpack dev server + BrowserSync for livereload
   jackson:
     serialization:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:file:./build/h2db/db/wenlambo;DB_CLOSE_DELAY=-1
-    username: wenlambo
+    url: jdbc:h2:file:./build/h2db/db/archivedataplayground;DB_CLOSE_DELAY=-1
+    username: archivedataplayground
     password:
     hikari:
       poolName: Hikari

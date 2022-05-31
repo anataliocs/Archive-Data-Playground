@@ -3,6 +3,7 @@ import { loadingBarReducer as loadingBar } from 'react-redux-loading-bar';
 
 import authentication from './authentication';
 import applicationProfile from './application-profile';
+import infura from './infura';
 
 import administration from 'app/modules/administration/administration.reducer';
 import userManagement from 'app/modules/administration/user-management/user-management.reducer';
@@ -25,6 +26,7 @@ const rootReducer: ReducersMapObject = {
   password,
   settings,
   loadingBar,
+  infura,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   ...entitiesReducers,
 };

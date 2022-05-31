@@ -24,7 +24,7 @@ plugins {
     //jhipster-needle-gradle-plugins - JHipster will add additional gradle plugins here
 }
 
-group = "io.infura.wenlambo"
+group = "io.infura.archivedataplayground"
 version = "0.0.1-SNAPSHOT"
 
 description = ""
@@ -83,7 +83,7 @@ eclipse {
 defaultTasks "bootRun"
 
 springBoot {
-    mainClass = "io.infura.wenlambo.WenlamboApp"
+    mainClass = "io.infura.archivedataplayground.ArchiveDataPlaygroundApp"
 }
 
 test {
@@ -144,8 +144,8 @@ liquibase {
     activities {
         main {
             driver "org.h2.Driver"
-            url "jdbc:h2:file:./build/h2db/db/wenlambo"
-            username "wenlambo"
+            url "jdbc:h2:file:./build/h2db/db/archivedataplayground"
+            username "archivedataplayground"
             password ""
             changeLogFile "src/main/resources/config/liquibase/master.xml"
             defaultSchemaName ""
@@ -154,11 +154,11 @@ liquibase {
         }
         diffLog {
             driver "org.h2.Driver"
-            url "jdbc:h2:file:./build/h2db/db/wenlambo"
-            username "wenlambo"
+            url "jdbc:h2:file:./build/h2db/db/archivedataplayground"
+            username "archivedataplayground"
             password ""
             changeLogFile project.ext.diffChangelogFile
-            referenceUrl "hibernate:spring:io.infura.wenlambo.domain?dialect=org.hibernate.dialect.H2Dialect&hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy"
+            referenceUrl "hibernate:spring:io.infura.archivedataplayground.domain?dialect=org.hibernate.dialect.H2Dialect&hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy"
             defaultSchemaName ""
             logLevel "debug"
             classpath "$buildDir/classes/java/main"

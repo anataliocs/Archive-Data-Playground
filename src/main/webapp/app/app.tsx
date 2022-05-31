@@ -9,6 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 import { getSession } from 'app/shared/reducers/authentication';
+import { getInfura } from 'app/shared/reducers/infura';
 import { getProfile } from 'app/shared/reducers/application-profile';
 import Header from 'app/shared/layout/header/header';
 import Footer from 'app/shared/layout/footer/footer';
@@ -25,6 +26,7 @@ export const App = () => {
   useEffect(() => {
     dispatch(getSession());
     dispatch(getProfile());
+    dispatch(getInfura());
   }, []);
 
   const isAuthenticated = useAppSelector(state => state.authentication.isAuthenticated);
