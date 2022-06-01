@@ -25,12 +25,11 @@ const databaseItem = () => (
   </DropdownItem>
 );
 
-export const AdminMenu = ({ showOpenAPI, showDatabase }) => (
+export const AdminMenu = ({ showOpenAPI }) => (
   <NavDropdown icon="users-cog" name="Administration" id="admin-menu" data-cy="adminMenu">
     {adminMenuItems()}
     {showOpenAPI && openAPIItem()}
 
-    {showDatabase && databaseItem()}
   </NavDropdown>
 );
 

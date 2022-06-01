@@ -19,15 +19,15 @@ public class InfuraResource {
         this.infuraService = infuraService;
     }
 
-    @PostMapping()
+    @GetMapping()
     @ResponseStatus(HttpStatus.OK)
     public GetLatestBlockResponse getLatestBlock() {
         return infuraService.getLatestBlock();
     }
 
-    @PostMapping("/{blockNumber}")
+    @GetMapping("/{blockNumber}")
     @ResponseStatus(HttpStatus.OK)
-    public GetBlockByNumberResponse getBlockByNumber(String blockNumber) {
-        return infuraService.getBlockByNumber();
+    public GetBlockByNumberResponse getBlockByNumber(@PathVariable String blockNumber) {
+        return infuraService.getBlockByNumber(blockNumber);
     }
 }

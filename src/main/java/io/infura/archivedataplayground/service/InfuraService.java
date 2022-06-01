@@ -33,14 +33,14 @@ public class InfuraService {
             .setMethod("eth_blockNumber"), GetLatestBlockResponse.class);
     }
 
-    public GetBlockByNumberResponse getBlockByNumber() {
+    public GetBlockByNumberResponse getBlockByNumber(String blockNumber) {
 
         final UriComponents uri = getBaseUriBuilder()
             .buildAndExpand(infuraProjectId);
 
         return restTemplate.postForObject(uri.toUri(), new InfuraBlockByNumberRequest()
             .setMethod("eth_getBlockByNumber")
-            .setParams(new Object[]{"0x5BAD55", TRUE}), GetBlockByNumberResponse.class);
+            .setParams(new Object[]{blockNumber, TRUE}), GetBlockByNumberResponse.class);
     }
 
     private static UriComponentsBuilder getBaseUriBuilder() {

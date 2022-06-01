@@ -3,7 +3,7 @@ import { loadingBarReducer as loadingBar } from 'react-redux-loading-bar';
 
 import authentication from './authentication';
 import applicationProfile from './application-profile';
-import infura from './infura';
+import infura from 'app/modules/infura/infura.reducer';
 
 import administration from 'app/modules/administration/administration.reducer';
 import userManagement from 'app/modules/administration/user-management/user-management.reducer';
