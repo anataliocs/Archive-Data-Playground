@@ -6,6 +6,7 @@ import {serializeAxiosError} from '../../shared/reducers/reducer.utils';
 import {AppThunk} from 'app/config/store';
 import {PasswordState, savePassword} from "app/modules/account/password/password.reducer";
 import {ApplicationProfileState, getProfile} from "app/shared/reducers/application-profile";
+import {PasswordResetSlice} from "app/modules/account/password-reset/password-reset.reducer";
 
 const initialState = {
   block: {}
@@ -64,7 +65,6 @@ export interface Blockdata {
 
 export const getInfura = createAsyncThunk('infura/getBlockByNumber', async (blocknumber: string) => {
     const response = axios.get<any>(`api/infura/${blocknumber}`);
-    console.log(response);
     return response;
   },
   {
@@ -74,14 +74,19 @@ export const getInfura = createAsyncThunk('infura/getBlockByNumber', async (bloc
 export const InfuraSlice = createSlice({
   name: 'block',
   initialState: initialState as InfuraState,
-  reducers: {},
+  reducers: {
+    reset() {
+      return initialState;
+    }
+  },
   extraReducers(builder) {
     builder.addCase(getInfura.fulfilled, (state, action) => {
-      const {data} = action.payload;
       state.block = action.payload.data;
     });
   }
 });
+
+export const { reset } = InfuraSlice.actions;
 
 // Reducer
 export default InfuraSlice.reducer;
