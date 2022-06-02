@@ -10,8 +10,8 @@ import {GetBlockByNumberResponse, GetBlockByNumberResult, getInfura} from "app/m
 
 export const InfuraPage = () => {
   const dispatch = useAppDispatch();
-  const block : GetBlockByNumberResponse  = useAppSelector(state => state.infura.block);
-  const blockResult : GetBlockByNumberResult  = block.result;
+  const block: GetBlockByNumberResponse = useAppSelector(state => state.infura.block);
+  const blockResult: GetBlockByNumberResult = block.result;
 
   const {
     formState: {errors, touchedFields},
@@ -41,7 +41,7 @@ export const InfuraPage = () => {
             isTouched={touchedFields.blockNumber}
           />
 
-          <Button color="primary" type="submit" data-cy="submit" >
+          <Button color="primary" type="submit" data-cy="submit">
             Search
           </Button><br/>
 
@@ -52,27 +52,30 @@ export const InfuraPage = () => {
 
         {block ? (
 
-
-
-          <ListGroup>
-            <ListGroupItem>JSON RPC Version: {block.jsonrpc}</ListGroupItem>
-            <ListGroupItem>Id: {block.id}</ListGroupItem>
-            <ListGroupItem>Difficulty: {blockResult.difficulty}</ListGroupItem>
-            <ListGroupItem>Gas Limit: {blockResult.gasLimit}</ListGroupItem>
-            <ListGroupItem>Gas Used: {blockResult.gasUsed}</ListGroupItem>
-            <ListGroupItem>Hash: {blockResult.hash}</ListGroupItem>
-            <ListGroupItem>Miner: {blockResult.miner}</ListGroupItem>
-            <ListGroupItem>Nonce: {blockResult.nonce}</ListGroupItem>
-            <ListGroupItem>Parent Hash: {blockResult.parentHash}</ListGroupItem>
-            <ListGroupItem>Receipts Root: {blockResult.receiptsRoot}</ListGroupItem>
-            <ListGroupItem>Receipts Root: {blockResult.receiptsRoot}</ListGroupItem>
-            <ListGroupItem>Sha3 Uncles: {blockResult.sha3Uncles}</ListGroupItem>
-            <ListGroupItem>Size: {blockResult.size}</ListGroupItem>
-            <ListGroupItem>State Root: {blockResult.stateRoot}</ListGroupItem>
-            <ListGroupItem>Timestamp: {blockResult.timestamp}</ListGroupItem>
-            <ListGroupItem>Total Difficulty: {blockResult.totalDifficulty}</ListGroupItem>
-            <ListGroupItem># of transactions: {blockResult.transactions.length}</ListGroupItem>
-          </ListGroup>
+            <ListGroup>
+              <ListGroupItem>JSON RPC Version: {block.jsonrpc}</ListGroupItem>
+              <ListGroupItem>Id: {block.id}</ListGroupItem>
+              {blockResult ? (
+                <>
+                  <ListGroupItem>Difficulty: {blockResult.difficulty}</ListGroupItem>
+                  <ListGroupItem>Gas Limit: {blockResult.gasLimit}</ListGroupItem>
+                  <ListGroupItem>Gas Used: {blockResult.gasUsed}</ListGroupItem>
+                  <ListGroupItem>Hash: {blockResult.hash}</ListGroupItem>
+                  <ListGroupItem>Miner: {blockResult.miner}</ListGroupItem>
+                  <ListGroupItem>Nonce: {blockResult.nonce}</ListGroupItem>
+                  <ListGroupItem>Parent Hash: {blockResult.parentHash}</ListGroupItem>
+                  <ListGroupItem>Receipts Root: {blockResult.receiptsRoot}</ListGroupItem>
+                  <ListGroupItem>Receipts Root: {blockResult.receiptsRoot}</ListGroupItem>
+                  <ListGroupItem>Sha3 Uncles: {blockResult.sha3Uncles}</ListGroupItem>
+                  <ListGroupItem>Size: {blockResult.size}</ListGroupItem>
+                  <ListGroupItem>State Root: {blockResult.stateRoot}</ListGroupItem>
+                  <ListGroupItem>Timestamp: {blockResult.timestamp}</ListGroupItem>
+                  <ListGroupItem>Total Difficulty: {blockResult.totalDifficulty}</ListGroupItem>
+                  <ListGroupItem># of transactions: {blockResult.transactions.length}</ListGroupItem>
+                </>
+              ) : <div>No block data</div>
+              }
+            </ListGroup>
           )
           : <div></div>
         }
