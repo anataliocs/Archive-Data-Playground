@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import {Button, Col, Row, Form, ButtonGroup, ListGroup, ListGroupItem} from 'reactstrap';
 import {ValidatedField} from 'react-jhipster';
-import {toast} from 'react-toastify';
 import {useForm} from 'react-hook-form';
 
 import {useAppDispatch, useAppSelector} from 'app/config/store';
@@ -17,8 +16,9 @@ export const InfuraPage = () => {
     formState: {errors, touchedFields},
   } = useForm({mode: 'onTouched'});
 
-  const handleBlockByNumberSubmit = (blockNumber) => {
-    dispatch(getInfura(blockNumber));
+  const handleBlockByNumberSubmit = (event) => {
+    event.preventDefault();
+    dispatch(getInfura(event.target[0].value));
   };
 
   const buttonHandleBlockByNumber = (blockNumber: string) =>
@@ -86,7 +86,7 @@ export const InfuraPage = () => {
 
         <br/>
         <hr/>
-        <h3> Block Data</h3>
+        <h3>Block Data </h3>
 
         {block ? (
 
