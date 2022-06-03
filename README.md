@@ -87,8 +87,6 @@ Technologies Used:
 - node/npm
 
 
-
-
 ### Setup and Configuration
 
 The project is built with a Java/Spring Boot backend and a React front-end.  
@@ -106,7 +104,7 @@ You will need to install the following dependencies locally to run this project:
 
 Head to https://infura.io/ and go to your project settings page:
 
-![Infura Dashboard](https://github.com/anataliocs/Archive-Data-Playground/blob/main/image.jpg?raw=true)
+![Infura Dashboard](https://raw.githubusercontent.com/anataliocs/Archive-Data-Playground/main/static/Infura-ui.jpeg)
 
 
 Now let’s set up our externalized configuration so that we can use our project ID without exposing those details on Github.  
@@ -161,10 +159,10 @@ After the application starts up you should see the following:
 ```
 
 Navigate to the local server in a browser at http://localhost:8080/
-![App UI](https://github.com/anataliocs/Archive-Data-Playground/blob/main/image.jpg?raw=true)
+![App UI](https://raw.githubusercontent.com/anataliocs/Archive-Data-Playground/main/static/app-UI-1.png)
 
 On the right-hand corner click account -> Sign-in and use the canned login and password “admin/admin”
-![App UI](https://github.com/anataliocs/Archive-Data-Playground/blob/main/image.jpg?raw=true)
+![App UI](https://raw.githubusercontent.com/anataliocs/Archive-Data-Playground/main/static/app-ui-2.png)
 
 You will then have access to the application.  The login flow comes from the base Jhipster project scaffolding tool that 
 was used to create the basic project skeleton.
@@ -176,7 +174,7 @@ This will bring you to the Swagger UI interface where you can call JSON-RPC endp
 128 blocks which are available via Archive nodes with hydrated transactions.  These calls can then be used in Block Explorer style 
 applications or other use cases.
 
-![Swagger UI](https://github.com/anataliocs/Archive-Data-Playground/blob/main/image.jpg?raw=true)
+![Swagger UI](https://raw.githubusercontent.com/anataliocs/Archive-Data-Playground/main/static/swagger-ui-1.png)
 
 
 Some specific blocks of code that help enable this functionality include:
@@ -275,7 +273,7 @@ backend but this is a more heavyweight solution that contains a lot of stuff you
 
 One feature that archive data enables is Block Exploration.
 
-![Swagger UI](https://github.com/anataliocs/Archive-Data-Playground/blob/main/image.jpg?raw=true)
+![Swagger UI](https://raw.githubusercontent.com/anataliocs/Archive-Data-Playground/main/static/app-ui-3.png)
 
 This block explorer displays information about about famous blocks in Ethereum history such as:
 
